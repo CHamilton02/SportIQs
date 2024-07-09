@@ -44,15 +44,22 @@ export default function App() {
         
     }, [questions])
 
-    
-
     function updateSelectedElement(questionNum, optionNum) {
         setSelectedElement(prevElem => {
             const newArray = [...prevElem]
             newArray[questionNum] = optionNum
             return newArray
         })
-        console.log(selectedElement)
+    }
+
+    function checkAnswers() {
+        let correctAnswers = 0
+
+        for (let i = 0; i < 5; i++) {
+            correctAnswers += correctLocation[i] === selectedElement[i] ? 1 : 0
+        }
+
+        console.log(`${correctAnswers} correct answers`)
     }
 
     const questionElements = options.map((element, index) => <Question
@@ -71,7 +78,7 @@ export default function App() {
                 questions.length > 0 ?
                 <div>
                     {questionElements}
-                    <button>
+                    <button onClick={checkAnswers}>
                         Check Answers
                     </button>
                 </div>
