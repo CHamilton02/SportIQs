@@ -1,0 +1,41 @@
+body {
+  font-family: 'Karla', Arial;
+  color: #293264;
+  margin: 0;
+  background: radial-gradient(circle, white 0%, #4D5B9E 100%);
+  height: 100vh;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.main-desc {
+  font-family: 'Inter', Arial;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.main-button {
+  background-color: #4D5B9E;
+  border: none;
+  color: #F5F7FB;
+  font-family: 'Inter', Arial;
+  font-size: 1rem;
+  padding: 15px 60px 15px 60px;
+  border-radius: 15px;
+}
+
+.button-container {
+  display: flex;
+}
