@@ -39,3 +39,8 @@ main {
 .button-container {
   display: flex;
 }
+
+.selected-button {
+  background-color: blue;
+  color: white;
+}

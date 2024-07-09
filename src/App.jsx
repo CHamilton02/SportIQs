@@ -20,6 +20,7 @@ export default function App() {
     const [questions, setQuestions] = React.useState([])
     const [options, setOptions] = React.useState([])
     const [correctLocation, setCorrectLocation] = React.useState([])
+    const [selectedElement, setSelectedElement] = React.useState([-1, -1, -1, -1, -1])
 
     React.useEffect(() => {
         if (playGame) {
@@ -43,11 +44,25 @@ export default function App() {
         
     }, [questions])
 
+    
+
+    function updateSelectedElement(questionNum, optionNum) {
+        setSelectedElement(prevElem => {
+            const newArray = [...prevElem]
+            newArray[questionNum] = optionNum
+            return newArray
+        })
+        console.log(selectedElement)
+    }
+
     const questionElements = options.map((element, index) => <Question
         question={questions[index]}
         options={options[index]}
         correctLocation={correctLocation[index]}
         key={index}
+        questionNum={index}
+        selectedElement={selectedElement[index]}
+        handleToggle={updateSelectedElement}
     />)
 
     return (
