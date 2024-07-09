@@ -78,7 +78,7 @@ export default function App() {
                 questions.length > 0 ?
                 <div>
                     {questionElements}
-                    <button onClick={checkAnswers}>
+                    <button className="check-button" onClick={checkAnswers}>
                         Check Answers
                     </button>
                 </div>
