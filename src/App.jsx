@@ -71,6 +71,9 @@ export default function App() {
                 questions.length > 0 ?
                 <div>
                     {questionElements}
+                    <button>
+                        Check Answers
+                    </button>
                 </div>
                 :
                 <div>
