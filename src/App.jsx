@@ -16,7 +16,7 @@ function placeCorrect(incorrectArray, correctAnswer) {
 }
 
 export default function App() {
-    const [playGame, setPlayGame] = React.useState(false)
+    const [gameCounter, setgameCounter] = React.useState(0)
     const [questions, setQuestions] = React.useState([])
     const [options, setOptions] = React.useState([])
     const [correctLocation, setCorrectLocation] = React.useState([])
@@ -24,12 +24,12 @@ export default function App() {
     const [finished, setFinished] = React.useState(false)
 
     React.useEffect(() => {
-        if (playGame) {
+        if (gameCounter) {
             fetch("https://opentdb.com/api.php?amount=5&category=21&type=multiple")
                 .then(res => res.json())
                 .then(data => setQuestions(data.results))
         }
-    }, [playGame])
+    }, [gameCounter])
 
     React.useEffect(() => {
         if (questions) {
@@ -64,7 +64,7 @@ export default function App() {
     }
 
     function playAgain() {
-        setPlayGame(prevValue => !prevValue)
+        setgameCounter(prevValue => prevValue + 1)
         setFinished(false)
         setSelectedElement([-1, -1, -1, -1, -1])
     }
@@ -104,7 +104,7 @@ export default function App() {
                 <div>
                     <h1 className="main-title">SportIQs</h1>
                     <h2 className="main-desc">A sports trivia game!</h2>
-                    <button className="main-button" onClick={() => setPlayGame(true)}>Start Quiz</button>   
+                    <button className="main-button" onClick={() => setgameCounter(1)}>Start Quiz</button>   
                 </div>     
             }
         </main>    
