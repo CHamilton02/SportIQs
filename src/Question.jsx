@@ -21,7 +21,7 @@ export default function Question(props) {
                         {decode(props.options[1])}
                     </button>
                     <button
-                        className={props.selectedElement === 2 ? 2 === props.correctLocation ? "correct-answer" : "wrong-answer inactie" : "unselected-button inactive"}
+                        className={props.selectedElement === 2 ? 2 === props.correctLocation ? "correct-answer" : "wrong-answer inactive" : "unselected-button inactive"}
                     >
                         {decode(props.options[2])}
                     </button>
