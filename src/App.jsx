@@ -21,6 +21,7 @@ export default function App() {
     const [options, setOptions] = React.useState([])
     const [correctLocation, setCorrectLocation] = React.useState([])
     const [selectedElement, setSelectedElement] = React.useState([-1, -1, -1, -1, -1])
+    const [finished, setFinished] = React.useState(false)
 
     React.useEffect(() => {
         if (playGame) {
@@ -59,7 +60,13 @@ export default function App() {
             correctAnswers += correctLocation[i] === selectedElement[i] ? 1 : 0
         }
 
-        console.log(`${correctAnswers} correct answers`)
+        return correctAnswers
+    }
+
+    function playAgain() {
+        setPlayGame(prevValue => !prevValue)
+        setFinished(false)
+        setSelectedElement([-1, -1, -1, -1, -1])
     }
 
     const questionElements = options.map((element, index) => <Question
@@ -70,17 +77,28 @@ export default function App() {
         questionNum={index}
         selectedElement={selectedElement[index]}
         handleToggle={updateSelectedElement}
+        gameFinished={finished}
     />)
 
     return (
         <main>
             {
                 questions.length > 0 ?
-                <div>
+                <div className="finished-game-container">
                     {questionElements}
-                    <button className="check-button" onClick={checkAnswers}>
-                        Check Answers
-                    </button>
+                    {
+                        finished ? 
+                        <div>
+                            <h2>{`You scored ${checkAnswers()}/5 correct answers`}</h2>
+                            <button onClick={playAgain}>
+                                Play again
+                            </button>
+                        </div>
+                        :
+                        <button className="check-button" onClick={() => setFinished(true)}>
+                            Check Answers
+                        </button>
+                    }
                 </div>
                 :
                 <div>
