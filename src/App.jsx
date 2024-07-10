@@ -89,7 +89,7 @@ export default function App() {
                     {
                         finished ? 
                         <div className="finished-game-container">
-                            <h2 className="endgame-message">{`You scored ${checkAnswers()}/5 correct answers`}</h2>
+                            <h2 className="endgame-message">{`Game ${gameCounter}: You scored ${checkAnswers()}/5 correct answers`}</h2>
                             <button className="play-again-button" onClick={playAgain}>
                                 Play again
                             </button>
