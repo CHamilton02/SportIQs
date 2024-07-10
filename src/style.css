@@ -103,3 +103,35 @@ main {
   height: 1px;
   background: #33449a;
 }
+
+.finished-game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.endgame-message {
+  font-family: 'Inter', Arial;
+  font-size: 0.9rem;
+  margin-right: 20px;
+}
+
+.play-again-button {
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  border: none;
+  height: 30px;
+  width: 104px;
+  border-radius: 10px;
+  font-family: 'Inter', Arial;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.play-again-button:hover {
+  background-color: #33449a;
+  font-size: 0.7rem;
+}

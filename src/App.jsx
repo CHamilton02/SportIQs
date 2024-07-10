@@ -84,13 +84,13 @@ export default function App() {
         <main>
             {
                 questions.length > 0 ?
-                <div className="finished-game-container">
+                <div>
                     {questionElements}
                     {
                         finished ? 
-                        <div>
-                            <h2>{`You scored ${checkAnswers()}/5 correct answers`}</h2>
-                            <button onClick={playAgain}>
+                        <div className="finished-game-container">
+                            <h2 className="endgame-message">{`You scored ${checkAnswers()}/5 correct answers`}</h2>
+                            <button className="play-again-button" onClick={playAgain}>
                                 Play again
                             </button>
                         </div>
