@@ -63,13 +63,48 @@ main {
   transition: 0.3s;
 }
 
-.unselected-button:hover {
+/* .unselected-button:hover {
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+} */
+
+.active:hover {
   background-color: #4D5B9E;
   color: #F5F7FB;
 }
 
+.inactive {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .selected-button {
   background-color: #D6DBF5;
+  border: none;
+  font-size: 0.9rem;
+  font-family: 'Inter', Arial;
+  color: #293264;
+  margin-right: 10px;
+  padding: 5px 20px 5px 20px;
+  min-width: 65px;
+  border-radius: 10px;
+}
+
+.correct-answer {
+  background-color: #94D7A2;
+  border: none;
+  font-size: 0.9rem;
+  font-family: 'Inter', Arial;
+  color: #293264;
+  margin-right: 10px;
+  padding: 5px 20px 5px 20px;
+  min-width: 65px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.wrong-answer {
+  background-color: #F8BCBC;
   border: none;
   font-size: 0.9rem;
   font-family: 'Inter', Arial;
