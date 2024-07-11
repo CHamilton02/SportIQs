@@ -1,5 +1,6 @@
 import React from "react"
 import Question from './Question'
+import {isMobile} from 'react-device-detect'
 
 function placeCorrect(incorrectArray, correctAnswer) {
     let location = Math.floor(Math.random() * 4)
@@ -93,25 +94,45 @@ export default function App() {
                 <div>
                     {questionElements}
                     {
-                        finished ? 
-                        <div className="finished-game-container">
-                            <h2 className="endgame-message">{`Game ${gameCounter}: You scored ${checkAnswers()}/5 [${getPercentCorrect()}%] correct answers`}</h2>
-                            <button className="play-again-button" onClick={playAgain}>
-                                Play again
+                        isMobile ?
+                            finished ? 
+                            <div className="finished-game-container">
+                                <h2 className="endgame-message-phone">{`Game ${gameCounter}: You scored ${checkAnswers()}/5 correct answers`}</h2>
+                                <button className="play-again-button-phone" onClick={playAgain}>
+                                    Play again
+                                </button>
+                            </div>
+                            :
+                            <button className="check-button-phone" onClick={() => setFinished(true)}>
+                                Check Answers
                             </button>
-                        </div>
                         :
-                        <button className="check-button" onClick={() => setFinished(true)}>
-                            Check Answers
-                        </button>
+                            finished ? 
+                            <div className="finished-game-container">
+                                <h2 className="endgame-message">{`Game ${gameCounter}: You scored ${checkAnswers()}/5 [${getPercentCorrect()}%] correct answers`}</h2>
+                                <button className="play-again-button" onClick={playAgain}>
+                                    Play again
+                                </button>
+                            </div>
+                            :
+                            <button className="check-button" onClick={() => setFinished(true)}>
+                                Check Answers
+                            </button>
                     }
                 </div>
+                :
+                isMobile ?
+                <div>
+                    <h1 className="main-title-phone">SportIQs</h1>
+                    <h2 className="main-desc-phone">A sports trivia game!</h2>
+                    <button className="main-button-phone" onClick={() => setgameCounter(1)}>Start Quiz</button>
+                </div>  
                 :
                 <div>
                     <h1 className="main-title">SportIQs</h1>
                     <h2 className="main-desc">A sports trivia game!</h2>
                     <button className="main-button" onClick={() => setgameCounter(1)}>Start Quiz</button>   
-                </div>     
+                </div>
             }
         </main>    
     )

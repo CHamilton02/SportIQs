@@ -23,12 +23,25 @@ main {
   margin-bottom: 1rem;
 }
 
+.main-title-phone {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+}
+
 .main-desc {
   font-family: 'Inter', Arial;
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 0rem;
   margin-bottom: 1rem;
+}
+
+.main-desc-phone {
+  font-family: 'Inter', Arial;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-top: 0rem;
+  margin-bottom: 3rem;
 }
 
 .main-button {
@@ -43,6 +56,18 @@ main {
   transition: 0.3s;
 }
 
+.main-button-phone {
+  background-color: #4D5B9E;
+  border: none;
+  color: #F5F7FB;
+  font-family: 'Inter', Arial;
+  font-size: 2.5rem;
+  height: 6rem;
+  width: 20rem;
+  border-radius: 1.6rem;
+  transition: 0.3s;
+}
+
 .main-button:hover {
   background-color: #33449a;
   font-size: 1rem;
@@ -53,9 +78,19 @@ main {
   font-size: 1rem;
 }
 
+.question-phone {
+  text-align: left;
+  font-size: 2rem;
+}
+
 .button-container {
   display: flex;
   margin-bottom: 1.2rem;
+}
+
+.button-container-phone {
+  display: flex;
+  margin-bottom: 2.4rem;
 }
 
 .option-button {
@@ -64,6 +99,14 @@ main {
   margin-right: 1rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.8rem;
+}
+
+.option-button-phone {
+  font-size: 1.8rem;
+  font-family: 'Inter', Arial;
+  margin-right: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 1.6rem;
 }
 
 .unselected-button {
@@ -121,6 +164,25 @@ main {
   font-size: 0.8rem;
 }
 
+.check-button-phone {
+  height: 5rem;
+  width: 18rem;
+  background-color: #4D5B9E;
+  border: none;
+  color: #D6DBF5;
+  border-radius: 1.6rem;
+  font-family: 'Inter', Arial;
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-top: 2rem;
+}
+
+.check-button-phone:hover {
+  background-color: #33449a;
+  font-size: 1..7rem;
+}
+
 .question-splitter {
   border: 0;
   height: 1px;
@@ -138,7 +200,13 @@ main {
 .endgame-message {
   font-family: 'Inter', Arial;
   font-size: 0.9rem;
-  margin-right: 20px;
+  margin-right: 1rem;
+}
+
+.endgame-message-phone {
+  font-family: 'Inter', Arial;
+  font-size: 1.8rem;
+  margin-right: 2rem;
 }
 
 .play-again-button {
@@ -157,4 +225,22 @@ main {
 .play-again-button:hover {
   background-color: #33449a;
   font-size: 0.8rem;
+}
+
+.play-again-button-phone {
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  border: none;
+  height: 5rem;
+  width: 14rem;
+  border-radius: 1.2rem;
+  font-family: 'Inter', Arial;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.play-again-button-phone:hover {
+  background-color: #33449a;
+  font-size: 1.7rem;
 }
