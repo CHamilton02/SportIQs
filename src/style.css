@@ -63,11 +63,6 @@ main {
   transition: 0.3s;
 }
 
-/* .unselected-button:hover {
-  background-color: #4D5B9E;
-  color: #F5F7FB;
-} */
-
 .active:hover {
   background-color: #4D5B9E;
   color: #F5F7FB;
