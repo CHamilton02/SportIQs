@@ -5,7 +5,7 @@ import {isMobile} from 'react-device-detect'
 export default function Question(props) {
     return (
         isMobile ?
-        <div> 
+        <div className="question-container-phone">
             <h3 className="question-phone">
                 {decode(props.question.question)}
             </h3>
@@ -72,7 +72,7 @@ export default function Question(props) {
                     </button>
                 </div>
                 :
-                <div className="button-container">
+                <div className="button-container-phone">
                     <button
                         className={props.selectedElement === 0 ? " option-button-phone selected-button" : "option-button-phone unselected-button active"}
                         onClick={() => props.handleToggle(props.questionNum, 0)}
