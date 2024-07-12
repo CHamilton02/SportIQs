@@ -74,25 +74,25 @@ export default function Question(props) {
                 :
                 <div className="button-container-phone">
                     <button
-                        className={props.selectedElement === 0 ? " option-button-phone selected-button" : "option-button-phone unselected-button active"}
+                        className={props.selectedElement === 0 ? " option-button-phone selected-button" : "option-button-phone unselected-button"}
                         onClick={() => props.handleToggle(props.questionNum, 0)}
                     >
                         {decode(props.options[0])}
                     </button>
                     <button
-                        className={props.selectedElement === 1 ? "option-button-phone selected-button" : "option-button-phone unselected-button active"}
+                        className={props.selectedElement === 1 ? "option-button-phone selected-button" : "option-button-phone unselected-button"}
                         onClick={() => props.handleToggle(props.questionNum, 1)}
                     >
                         {decode(props.options[1])}
                     </button>
                     <button
-                        className={props.selectedElement === 2 ? "option-button-phone selected-button" : "option-button-phone unselected-button active"}
+                        className={props.selectedElement === 2 ? "option-button-phone selected-button" : "option-button-phone unselected-button"}
                         onClick={() => props.handleToggle(props.questionNum, 2)}
                     >
                         {decode(props.options[2])}
                     </button>
                     <button
-                        className={props.selectedElement === 3 ? "option-button-phone selected-button" : "option-button-phone unselected-button active"}
+                        className={props.selectedElement === 3 ? "option-button-phone selected-button" : "option-button-phone unselected-button"}
                         onClick={() => props.handleToggle(props.questionNum, 3)}
                     >
                         {decode(props.options[3])}
