@@ -88,7 +88,7 @@ export default function App() {
     />)
 
     return (
-        <main className={isMobile ? "main-phone" : ""}>
+        <main className={questions.length > 0 ? isMobile ? "main-phone" : "" : ""}>
             {
                 questions.length > 0 ?
                 <div>
