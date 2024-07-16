@@ -55,7 +55,7 @@ main {
 }
 
 .main-phone {
-  display: initial;
+  display: block;
 }
 
 .main-title {
@@ -288,7 +288,6 @@ main {
   right: 10px;
   display: flex;
   align-items: center;
-  font-size: 1rem;
   background-color: var(--toggle-button-background);
   color: var(--button-text);
   border: none;
@@ -305,7 +304,6 @@ main {
   right: 10px;
   display: flex;
   align-items: center;
-  font-size: 1rem;
   background-color: var(--toggle-button-background);
   color: var(--button-text);
   border: none;
@@ -332,7 +330,6 @@ main {
   right: 20px;
   display: flex;
   align-items: center;
-  font-size: 4rem;
   background-color: var(--toggle-button-background);
   color: var(--button-text);
   border: none;
@@ -349,7 +346,6 @@ main {
   right: 20px;
   display: flex;
   align-items: center;
-  font-size: 4rem;
   background-color: var(--toggle-button-background);
   color: var(--button-text);
   border: none;
@@ -362,11 +358,6 @@ main {
 
 .dark-mode-image-phone {
   width: 6rem;
-  height: auto;
-}
-
-.dark-mode-image-phone {
-  width: 3rem;
   height: auto;
 }
 
