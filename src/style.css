@@ -1,8 +1,42 @@
+:root {
+  --background: radial-gradient(circle, white 0%, #4D5B9E 100%);
+  --text-color: #293264;
+  --button-background: #4D5B9E;
+  --button-text: #F5F7FB;
+  --hover-background: #33449a;
+  --unselected-background: #F5F7FB;
+  --unselected-border: #4D5B9E;
+  --selected-background: #D6DBF5;
+  --correct-background: #94D7A2;
+  --wrong-background: #F8BCBC;
+  --check-background: #4D5B9E;
+  --check-text: #D6DBF5;
+  --splitter-background: #33449a;
+  --button-padding: 0rem 0 0 4rem;
+  --toggle-button-background: #16213E;
+}
+
+.dark-mode {
+  --background: radial-gradient(circle, #1A1A2E 0%, #16213E 100%);
+  --text-color: #E0E0E0;
+  --button-background: #16213E;
+  --button-text: #E0E0E0;
+  --hover-background: #0F3460;
+  --unselected-background: #333333;
+  --unselected-border: #555555;
+  --selected-background: #555555;
+  --correct-background: #28A745;
+  --wrong-background: #DC3545;
+  --check-background: #0F3460;
+  --check-text: #E0E0E0;
+  --splitter-background: #555555;
+  --button-padding: 0rem 4rem 0 0;
+  --toggle-button-background: #4D5B9E;
+}
+
 body {
   font-family: 'Karla', Arial;
-  color: #293264;
   margin: 0;
-  background: radial-gradient(circle, white 0%, #4D5B9E 100%);
   height: 100vh;
 }
 
@@ -16,6 +50,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: var(--background);
+  color: var(--text-color);
 }
 
 .main-phone {
@@ -49,9 +85,9 @@ main {
 }
 
 .main-button {
-  background-color: #4D5B9E;
+  background-color: var(--button-background);
   border: none;
-  color: #F5F7FB;
+  color: var(--button-text);
   font-family: 'Inter', Arial;
   font-size: 1.25rem;
   height: 3rem;
@@ -61,9 +97,9 @@ main {
 }
 
 .main-button-phone {
-  background-color: #4D5B9E;
+  background-color: var(--button-background);
   border: none;
-  color: #F5F7FB;
+  color: var(--button-text);
   font-family: 'Inter', Arial;
   font-size: 2.5rem;
   height: 6rem;
@@ -73,7 +109,7 @@ main {
 }
 
 .main-button:hover {
-  background-color: #33449a;
+  background-color: var(--hover-background);
   font-size: 1rem;
 }
 
@@ -120,9 +156,9 @@ main {
 }
 
 .unselected-button {
-  background-color: #F5F7FB;
-  border: 1px solid #4D5B9E;
-  color: #293264;
+  background-color: var(--unselected-background);
+  border: 1px solid var(--unselected-border);
+  color: var(--text-color);
   transition: 0.3s;
 }
 
@@ -137,31 +173,31 @@ main {
 }
 
 .selected-button {
-  background-color: #D6DBF5;
+  background-color: var(--selected-background);
   border: none;
-  color: #293264;
+  color: var(--text-color);
   cursor: default;
 }
 
 .correct-answer {
-  background-color: #94D7A2;
+  background-color: var(--correct-background);
   border: none;
-  color: #293264;
+  color: var(--text-color);
   cursor: default;
 }
 
 .wrong-answer {
-  background-color: #F8BCBC;
+  background-color: var(--wrong-background);
   border: none;
-  color: #293264;
+  color: var(--text-color);
 }
 
 .check-button {
   height: 2.5rem;
   width: 9rem;
-  background-color: #4D5B9E;
+  background-color: var(--check-background);
   border: none;
-  color: #D6DBF5;
+  color: var(--check-text);
   border-radius: 0.8rem;
   font-family: 'Inter', Arial;
   font-size: 0.9rem;
@@ -177,9 +213,9 @@ main {
 .check-button-phone {
   height: 5rem;
   width: 18rem;
-  background-color: #4D5B9E;
+  background-color: var(--check-background);
   border: none;
-  color: #D6DBF5;
+  color: var(--check-text);
   border-radius: 1.6rem;
   font-family: 'Inter', Arial;
   font-size: 1.8rem;
@@ -191,7 +227,7 @@ main {
 .question-splitter {
   border: 0;
   height: 1px;
-  background: #33449a;
+  background: var(--splitter-background);
 }
 
 .finished-game-container {
@@ -215,8 +251,8 @@ main {
 }
 
 .play-again-button {
-  background-color: #4D5B9E;
-  color: #F5F7FB;
+  background-color: var(--button-background);
+  color: var(--button-text);
   border: none;
   height: 2.5rem;
   width: 7rem;
@@ -233,8 +269,8 @@ main {
 }
 
 .play-again-button-phone {
-  background-color: #4D5B9E;
-  color: #F5F7FB;
+  background-color: var(--button-background);
+  color: var(--button-text);
   border: none;
   height: 5rem;
   width: 14rem;
@@ -244,6 +280,32 @@ main {
   font-weight: 500;
   transition: 0.3s;
   margin-bottom: 3rem;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  background-color: var(--toggle-button-background);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  padding: var(--button-padding);
+  border-radius: 2rem;
+  opacity: 50%;
+}
+
+.toggle-button:hover {
+  opacity: 100%;
+}
+
+.dark-mode-image {
+  width: 3rem;
+  height: auto;
 }
 
 @media (max-width: 600px) {

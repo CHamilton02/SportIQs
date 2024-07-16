@@ -1,6 +1,8 @@
 import React from "react"
 import Question from './Question'
 import {isMobile} from 'react-device-detect'
+import moonEmoji from './assets/moon-emoji.png'
+import sunEmoji from './assets/sun-emoji.png'
 
 function placeCorrect(incorrectArray, correctAnswer) {
     let location = Math.floor(Math.random() * 4)
@@ -23,6 +25,7 @@ export default function App() {
     const [correctLocation, setCorrectLocation] = React.useState([])
     const [selectedElement, setSelectedElement] = React.useState([-1, -1, -1, -1, -1])
     const [finished, setFinished] = React.useState(false)
+    const [darkMode, setDarkMode] = React.useState(localStorage.getItem('darkMode') === null ? localStorage.false : JSON.parse(localStorage.getItem('darkMode')))
 
     React.useEffect(() => {
         if (gameCounter) {
@@ -45,6 +48,13 @@ export default function App() {
         }
         
     }, [questions])
+
+    function toggleDarkMode() {
+        setDarkMode(prevMode => {
+            localStorage.setItem('darkMode', JSON.stringify(!prevMode))
+            return !prevMode
+        })
+    }
 
     function updateSelectedElement(questionNum, optionNum) {
         setSelectedElement(prevElem => {
@@ -88,7 +98,10 @@ export default function App() {
     />)
 
     return (
-        <main className={questions.length > 0 ? isMobile ? "main-phone" : "" : ""}>
+        <main className={`${questions.length > 0 ? isMobile ? "main-phone" : "" : ""} ${darkMode ? "dark-mode" : ""}`}>
+            <button className="toggle-button" onClick={toggleDarkMode}>
+                <img src={darkMode ? sunEmoji : moonEmoji} className="dark-mode-image"/>
+            </button>
             {
                 questions.length > 0 ?
                 <div>
