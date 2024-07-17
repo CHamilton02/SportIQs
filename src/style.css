@@ -321,7 +321,7 @@ main {
   opacity: 50%;
 }
 
-.toggle-button:hover
+.toggle-button:hover,
 .toggle-button-dark:hover {
   opacity: 100%;
 }
