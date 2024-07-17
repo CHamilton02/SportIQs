@@ -92,9 +92,9 @@ main {
 }
 
 .main-button {
-  background-color: var(--button-background);
+  background-color: var(--check-background);
   border: none;
-  color: var(--button-text);
+  color: var(--check-text);
   font-family: 'Inter', Arial;
   font-size: 1.25rem;
   height: 3rem;
@@ -104,9 +104,9 @@ main {
 }
 
 .main-button-phone {
-  background-color: var(--button-background);
+  background-color: var(--check-background);
   border: none;
-  color: var(--button-text);
+  color: var(--check-text);
   font-family: 'Inter', Arial;
   font-size: 2.5rem;
   height: 6rem;
@@ -258,8 +258,8 @@ main {
 }
 
 .play-again-button {
-  background-color: var(--button-background);
-  color: var(--button-text);
+  background-color: var(--check-background);
+  color: var(--check-text);
   border: none;
   height: 2.5rem;
   width: 7rem;
@@ -276,8 +276,8 @@ main {
 }
 
 .play-again-button-phone {
-  background-color: var(--button-background);
-  color: var(--button-text);
+  background-color: var(--check-background);
+  color: var(--check-text);
   border: none;
   height: 5rem;
   width: 14rem;
