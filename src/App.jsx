@@ -101,7 +101,7 @@ export default function App() {
         <main className={`${questions.length > 0 ? isMobile ? "main-phone" : "" : ""} ${darkMode ? "dark-mode" : ""}`}>
             {
                 questions.length > 0 ?
-                <div>
+                <div className={isMobile ? "game-container-phone" : ""}>
                     {questionElements}
                     {
                         isMobile ?

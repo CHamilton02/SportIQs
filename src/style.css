@@ -37,7 +37,8 @@
 body {
   font-family: 'Karla', Arial;
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  height: 100%;
 }
 
 button {
@@ -52,10 +53,16 @@ main {
   text-align: center;
   background: var(--background);
   color: var(--text-color);
+  margin: 0;
 }
 
 .main-phone {
+  height: 100%;
   display: block;
+}
+
+.game-container-phone {
+  padding: 3rem 0rem 3rem 0rem;
 }
 
 .main-title {
