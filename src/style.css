@@ -62,7 +62,7 @@ main {
 }
 
 .game-container-phone {
-  padding: 3rem 0rem 3rem 0rem;
+  padding: 7rem 0rem 3rem 0rem;
 }
 
 .main-title {
@@ -290,7 +290,7 @@ main {
 }
 
 .toggle-button {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
@@ -306,7 +306,7 @@ main {
 }
 
 .toggle-button-dark {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
@@ -332,7 +332,7 @@ main {
 }
 
 .toggle-button-phone {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   display: flex;
@@ -348,7 +348,7 @@ main {
 }
 
 .toggle-button-dark-phone {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   display: flex;
