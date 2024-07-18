@@ -99,9 +99,15 @@ export default function App() {
 
     return (
         <main className={`${questions.length > 0 ? isMobile ? "main-phone" : "" : ""} ${darkMode ? "dark-mode" : ""}`}>
+            <button className={isMobile ?
+                darkMode ? "toggle-button-dark-phone" : "toggle-button-phone"
+                :
+                darkMode ? "toggle-button-dark" : "toggle-button"} onClick={toggleDarkMode}>
+                <img src={darkMode ? sunEmoji : moonEmoji} className={isMobile ? "dark-mode-image-phone" : "dark-mode-image"}/>
+            </button>
             {
                 questions.length > 0 ?
-                <div>
+                <div className={isMobile ? "game-container-phone" : ""}>
                     {questionElements}
                     {
                         isMobile ?
@@ -133,18 +139,12 @@ export default function App() {
                 :
                 isMobile ?
                 <div>
-                    <button className={darkMode ? "toggle-button-dark-phone" : "toggle-button-phone"} onClick={toggleDarkMode}>
-                        <img src={darkMode ? sunEmoji : moonEmoji} className={"dark-mode-image-phone"}/>
-                    </button>
                     <h1 className="main-title-phone">SportIQs</h1>
                     <h2 className="main-desc-phone">A sports trivia game!</h2>
                     <button className="main-button-phone" onClick={() => setgameCounter(1)}>Start Quiz</button>
                 </div>  
                 :
                 <div>
-                    <button className={darkMode ? "toggle-button-dark" : "toggle-button"} onClick={toggleDarkMode}>
-                        <img src={darkMode ? sunEmoji : moonEmoji} className="dark-mode-image"/>
-                    </button>
                     <h1 className="main-title">SportIQs</h1>
                     <h2 className="main-desc">A sports trivia game!</h2>
                     <button className="main-button" onClick={() => setgameCounter(1)}>Start Quiz</button>   

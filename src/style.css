@@ -1,5 +1,5 @@
 :root {
-  --background: radial-gradient(circle, white 0%, #4D5B9E 100%);
+  --background: #d4dbff;
   --text-color: #293264;
   --button-background: #4D5B9E;
   --button-text: #F5F7FB;
@@ -37,7 +37,8 @@
 body {
   font-family: 'Karla', Arial;
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  height: 100%;
 }
 
 button {
@@ -52,10 +53,16 @@ main {
   text-align: center;
   background: var(--background);
   color: var(--text-color);
+  margin: 0;
 }
 
 .main-phone {
+  height: 100%;
   display: block;
+}
+
+.game-container-phone {
+  padding: 7rem 0rem 3rem 0rem;
 }
 
 .main-title {
@@ -85,9 +92,9 @@ main {
 }
 
 .main-button {
-  background-color: var(--button-background);
+  background-color: var(--check-background);
   border: none;
-  color: var(--button-text);
+  color: var(--check-text);
   font-family: 'Inter', Arial;
   font-size: 1.25rem;
   height: 3rem;
@@ -97,9 +104,9 @@ main {
 }
 
 .main-button-phone {
-  background-color: var(--button-background);
+  background-color: var(--check-background);
   border: none;
-  color: var(--button-text);
+  color: var(--check-text);
   font-family: 'Inter', Arial;
   font-size: 2.5rem;
   height: 6rem;
@@ -251,8 +258,8 @@ main {
 }
 
 .play-again-button {
-  background-color: var(--button-background);
-  color: var(--button-text);
+  background-color: var(--check-background);
+  color: var(--check-text);
   border: none;
   height: 2.5rem;
   width: 7rem;
@@ -269,8 +276,8 @@ main {
 }
 
 .play-again-button-phone {
-  background-color: var(--button-background);
-  color: var(--button-text);
+  background-color: var(--check-background);
+  color: var(--check-text);
   border: none;
   height: 5rem;
   width: 14rem;
@@ -283,7 +290,7 @@ main {
 }
 
 .toggle-button {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
@@ -299,7 +306,7 @@ main {
 }
 
 .toggle-button-dark {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
@@ -314,7 +321,7 @@ main {
   opacity: 50%;
 }
 
-.toggle-button:hover
+.toggle-button:hover,
 .toggle-button-dark:hover {
   opacity: 100%;
 }
@@ -325,7 +332,7 @@ main {
 }
 
 .toggle-button-phone {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   display: flex;
@@ -341,7 +348,7 @@ main {
 }
 
 .toggle-button-dark-phone {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   display: flex;
