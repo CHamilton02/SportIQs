@@ -102,7 +102,7 @@ export default function App() {
             <button className={isMobile ?
                 darkMode ? "toggle-button-dark-phone" : "toggle-button-phone"
                 :
-                darkMode ? "toggle-button-dark" : "toggle-button"} onClick={toggleDarkMode}>
+                darkMode ? "toggle-button toggle-button-dark" : "toggle-button"} onClick={toggleDarkMode}>
                 <img src={darkMode ? sunEmoji : moonEmoji} className={isMobile ? "dark-mode-image-phone" : "dark-mode-image"}/>
             </button>
             {
