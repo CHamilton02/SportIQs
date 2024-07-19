@@ -100,7 +100,7 @@ export default function App() {
     return (
         <main className={`${questions.length > 0 ? isMobile ? "main-phone" : "" : ""} ${darkMode ? "dark-mode" : ""}`}>
             <button className={isMobile ?
-                darkMode ? "toggle-button-dark-phone" : "toggle-button-phone"
+                darkMode ? "toggle-button-phone toggle-button-dark-phone" : "toggle-button-phone"
                 :
                 darkMode ? "toggle-button toggle-button-dark" : "toggle-button"} onClick={toggleDarkMode}>
                 <img src={darkMode ? sunEmoji : moonEmoji} className={isMobile ? "dark-mode-image-phone" : "dark-mode-image"}/>
