@@ -59,7 +59,7 @@ main {
 }
 
 .game-container-phone {
-  padding: 7rem 0rem 3rem 0rem;
+  padding: 7rem 0 1rem;
 }
 
 .main-title {
@@ -251,7 +251,7 @@ main {
 .endgame-message-phone {
   font-family: 'Inter', Arial;
   font-size: 1.8rem;
-  margin: 0rem 2rem 3rem 0rem;
+  margin: 0rem 2rem 1rem 0rem;
 }
 
 .play-again-button {
@@ -283,7 +283,7 @@ main {
   font-size: 1.6rem;
   font-weight: 500;
   transition: 0.3s;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .toggle-button {
