@@ -3,6 +3,7 @@ import Question from './Question'
 import {isMobile} from 'react-device-detect'
 import moonEmoji from './assets/moon-emoji.png'
 import sunEmoji from './assets/sun-emoji.png'
+import Confetti from 'react-confetti'
 
 function placeCorrect(incorrectArray, correctAnswer) {
     let location = Math.floor(Math.random() * 4)
@@ -113,6 +114,7 @@ export default function App() {
                         isMobile ?
                             finished ? 
                             <div className="finished-game-container">
+                                {checkAnswers() === 5 && <Confetti />}
                                 <h2 className="endgame-message-phone">{`Game ${gameCounter}: You scored ${checkAnswers()}/5 correct answers`}</h2>
                                 <button className="play-again-button-phone" onClick={playAgain}>
                                     Play again
@@ -125,6 +127,7 @@ export default function App() {
                         :
                             finished ? 
                             <div className="finished-game-container">
+                                {checkAnswers() === 5 && <Confetti />}
                                 <h2 className="endgame-message">{`Game ${gameCounter}: You scored ${checkAnswers()}/5 [${getPercentCorrect()}%] correct answers`}</h2>
                                 <button className="play-again-button" onClick={playAgain}>
                                     Play again
