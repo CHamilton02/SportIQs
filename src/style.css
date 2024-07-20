@@ -62,6 +62,19 @@ main {
   padding: 7rem 0 1rem;
 }
 
+.main-button, .question, .button-container, .option-button,
+.check-button, .endgame-message, .endgame-message-phone, .play-again-button,
+.play-again-button-phone {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.main-title, .main-title-phone {
+  font-family: 'Karla', Arial, sans-serif;
+}
+
 .main-title {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -73,61 +86,56 @@ main {
 }
 
 .main-desc {
-  font-family: 'Inter', Arial;
   font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 0rem;
   margin-bottom: 1rem;
 }
 
 .main-desc-phone {
-  font-family: 'Inter', Arial;
   font-size: 3rem;
-  font-weight: 400;
-  margin-top: 0rem;
   margin-bottom: 3rem;
 }
 
-.main-button {
+.main-button, .main-button-phone, .check-button, .check-button-phone,
+.play-again-button, .play-again-button-phone {
   background-color: var(--button-background);
   border: none;
   color: var(--button-text);
-  font-family: 'Inter', Arial;
+  border-radius: 0.8rem;
   font-size: 1.25rem;
   height: 3rem;
   width: 10rem;
-  border-radius: 0.8rem;
-  transition: 0.3s;
 }
 
-.main-button-phone {
-  background-color: var(--button-background);
-  border: none;
-  color: var(--button-text);
-  font-family: 'Inter', Arial;
+.main-button-phone, .check-button-phone, .play-again-button-phone {
   font-size: 2.5rem;
   height: 6rem;
   width: 20rem;
   border-radius: 1.6rem;
-  transition: 0.3s;
+  margin-bottom: 3rem;
+  transition: none;
 }
 
-.main-button:hover {
+.main-button:hover, .check-button:hover, .play-again-button:hover {
   background-color: var(--hover-background);
   font-size: 1rem;
 }
 
 .question-container-phone {
-  padding: 0px 3rem 0px 3rem;
+  padding: 0 3rem 0 3rem;
 }
 
-.question {
+.question,
+.question-phone {
   text-align: left;
   font-size: 1rem;
 }
 
+.question {
+  margin-bottom: 0.5rem;
+}
+
 .question-phone {
-  text-align: left;
   font-size: 2rem;
 }
 
@@ -139,23 +147,20 @@ main {
 .button-container-phone {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 1rem;
-  max-width: 100%;
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 
 .option-button {
   font-size: 0.9rem;
-  font-family: 'Inter', Arial;
   margin-right: 1rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.8rem;
 }
 
 .option-button-phone {
   font-size: 1.8rem;
-  font-family: 'Inter', Arial;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 1.6rem;
 }
 
@@ -163,7 +168,6 @@ main {
   background-color: var(--unselected-background);
   border: 1px solid var(--unselected-border);
   color: var(--text-color);
-  transition: 0.3s;
 }
 
 .active:hover {
@@ -176,55 +180,30 @@ main {
   cursor: default;
 }
 
-.selected-button {
-  background-color: var(--selected-background);
+.selected-button, .correct-answer, .wrong-answer {
   border: none;
   color: var(--text-color);
   cursor: default;
+}
+
+.selected-button {
+  background-color: var(--selected-background);
 }
 
 .correct-answer {
   background-color: var(--correct-background);
-  border: none;
-  color: var(--text-color);
-  cursor: default;
 }
 
 .wrong-answer {
   background-color: var(--wrong-background);
-  border: none;
-  color: var(--text-color);
 }
 
 .check-button {
-  height: 2.5rem;
-  width: 9rem;
-  background-color: var(--button-background);
-  border: none;
-  color: var(--button-text);
-  border-radius: 0.8rem;
-  font-family: 'Inter', Arial;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.check-button:hover {
-  background-color: #33449a;
-  font-size: 0.8rem;
+  width: 12rem;
 }
 
 .check-button-phone {
-  height: 5rem;
-  width: 18rem;
-  background-color: var(--button-background);
-  border: none;
-  color: var(--button-text);
-  border-radius: 1.6rem;
-  font-family: 'Inter', Arial;
-  font-size: 1.8rem;
-  font-weight: 500;
-  transition: 0.3s;
+  width: 24rem;
   margin: 2rem 0rem 2rem 0rem;
 }
 
@@ -238,55 +217,25 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin: 30px 0 10px;
 }
 
 .endgame-message {
-  font-family: 'Inter', Arial;
   font-size: 0.9rem;
   margin-right: 1rem;
 }
 
 .endgame-message-phone {
-  font-family: 'Inter', Arial;
   font-size: 1.8rem;
-  margin: 0rem 2rem 1rem 0rem;
-}
-
-.play-again-button {
-  background-color: var(--button-background);
-  color: var(--button-text);
-  border: none;
-  height: 2.5rem;
-  width: 7rem;
-  border-radius: 0.6rem;
-  font-family: 'Inter', Arial;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.play-again-button:hover {
-  background-color: #33449a;
-  font-size: 0.8rem;
+  margin: 0 2rem 1rem 0;
+  transition: none;
 }
 
 .play-again-button-phone {
-  background-color: var(--button-background);
-  color: var(--button-text);
-  border: none;
-  height: 5rem;
-  width: 14rem;
-  border-radius: 1.2rem;
-  font-family: 'Inter', Arial;
-  font-size: 1.6rem;
-  font-weight: 500;
-  transition: 0.3s;
   margin-bottom: 1rem;
 }
 
-.toggle-button {
+.toggle-button, .toggle-button-phone {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -301,8 +250,11 @@ main {
   opacity: 50%;
 }
 
-.toggle-button-dark {
-  padding: 0 4rem 0 0;
+.toggle-button-phone {
+  top: 20px;
+  right: 20px;
+  padding: 0 0 0 8rem;
+  border-radius: 4rem;
 }
 
 .toggle-button:hover,
@@ -310,33 +262,21 @@ main {
   opacity: 100%;
 }
 
-.dark-mode-image {
-  width: 3rem;
-  height: auto;
-}
-
-.toggle-button-phone {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  background-color: var(--toggle-button-background);
-  color: var(--button-text);
-  border: none;
-  transition: opacity 0.3s;
-  padding: 0 0 0 8rem;
-  border-radius: 4rem;
-  opacity: 50%;
+.toggle-button-dark {
+  padding: 0 4rem 0 0;
 }
 
 .toggle-button-dark-phone {
   padding: 0 8rem 0 0;
 }
 
+.dark-mode-image, .dark-mode-image-phone {
+  width: 3rem;
+  height: auto;
+}
+
 .dark-mode-image-phone {
   width: 6rem;
-  height: auto;
 }
 
 @media (max-width: 600px) {
