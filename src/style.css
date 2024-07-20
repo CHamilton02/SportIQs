@@ -116,6 +116,11 @@ main {
   transition: none;
 }
 
+.play-again-button-phone {
+  font-size: 2.2rem;
+  width: 18rem;
+}
+
 .main-button:hover, .check-button:hover, .play-again-button:hover {
   background-color: var(--hover-background);
   font-size: 1rem;
