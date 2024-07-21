@@ -254,7 +254,7 @@ main {
   background-color: var(--toggle-button-background);
   color: var(--button-text);
   border: none;
-  transition: opacity 0.3s;
+  transition: 0.5s;
   padding: 0 0 0 4rem;
   border-radius: 2rem;
   opacity: 50%;
