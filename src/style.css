@@ -1,9 +1,9 @@
 :root {
-  --background: #d4dbff;
+  --background: #b8c4ff;
   --text-color: #293264;
   --button-background: #4D5B9E;
   --button-text: #D6DBF5;
-  --hover-background: #33449a;
+  --hover-background: #253899;
   --unselected-background: #F5F7FB;
   --unselected-border: #4D5B9E;
   --selected-background: #D6DBF5;
@@ -19,7 +19,7 @@
   --text-color: #E0E0E0;
   --button-background: #0F3460;
   --button-text: #E0E0E0;
-  --hover-background: #0F3460;
+  --hover-background: #4D5B9E;
   --unselected-background: #333333;
   --unselected-border: #555555;
   --selected-background: #555555;
@@ -102,7 +102,7 @@ main {
   border: none;
   color: var(--button-text);
   border-radius: 0.8rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   height: 3rem;
   width: 10rem;
 }
@@ -123,7 +123,6 @@ main {
 
 .main-button:hover, .check-button:hover, .play-again-button:hover {
   background-color: var(--hover-background);
-  font-size: 1rem;
 }
 
 .question-container-phone {
