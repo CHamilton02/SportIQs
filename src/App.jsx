@@ -26,7 +26,7 @@ export default function App() {
     const [correctLocation, setCorrectLocation] = React.useState([])
     const [selectedElement, setSelectedElement] = React.useState([-1, -1, -1, -1, -1])
     const [finished, setFinished] = React.useState(false)
-    const [darkMode, setDarkMode] = React.useState(localStorage.getItem('darkMode') === null ? localStorage.false : JSON.parse(localStorage.getItem('darkMode')))
+    const [darkMode, setDarkMode] = React.useState(localStorage.getItem('darkMode') === null ? localStorage.setItem('darkMode', false) : JSON.parse(localStorage.getItem('darkMode')))
 
     React.useEffect(() => {
         if (gameCounter) {
