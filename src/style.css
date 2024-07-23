@@ -59,7 +59,7 @@ main {
 }
 
 .game-container-phone {
-  padding: 7rem 0 1rem;
+  padding: 3rem 0 1rem;
 }
 
 .main-button, .question, .button-container, .option-button,
@@ -71,18 +71,10 @@ main {
   font-family: 'Inter', Arial, sans-serif;
 }
 
-.main-title, .main-title-phone {
-  font-family: 'Karla', Arial, sans-serif;
-}
-
 .main-title {
+  font-family: 'Karla', Arial, sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
-}
-
-.main-title-phone {
-  font-size: 6rem;
-  margin-bottom: 3rem;
 }
 
 .main-desc {
@@ -91,12 +83,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.main-desc-phone {
-  font-size: 3rem;
-  margin-bottom: 3rem;
-}
-
-.main-button, .main-button-phone, .check-button, .check-button-phone,
+.main-button, .check-button, .check-button-phone,
 .play-again-button, .play-again-button-phone {
   background-color: var(--button-background);
   border: none;
@@ -107,7 +94,7 @@ main {
   width: 10rem;
 }
 
-.main-button-phone, .check-button-phone, .play-again-button-phone {
+.check-button-phone, .play-again-button-phone {
   font-size: 2.5rem;
   height: 6rem;
   width: 20rem;
