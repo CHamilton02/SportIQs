@@ -59,7 +59,7 @@ main {
 }
 
 .game-container-phone {
-  padding: 3rem 0 1rem;
+  padding-top: 4rem;
 }
 
 .main-button, .question, .button-container, .option-button,
@@ -94,7 +94,7 @@ main {
   width: 10rem;
 }
 
-.check-button-phone, .play-again-button-phone {
+.play-again-button-phone {
   font-size: 2.5rem;
   height: 6rem;
   width: 20rem;
@@ -113,7 +113,7 @@ main {
 }
 
 .question-container-phone {
-  padding: 0 3rem 0 3rem;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 .question,
@@ -128,7 +128,7 @@ main {
 }
 
 .question-phone {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .button-container {
@@ -139,8 +139,8 @@ main {
 .button-container-phone {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .option-button {
@@ -151,9 +151,9 @@ main {
 }
 
 .option-button-phone {
-  font-size: 1.8rem;
-  padding: 1rem 2rem;
-  border-radius: 1.6rem;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+  border-radius: 0.6rem;
 }
 
 .unselected-button {
@@ -195,8 +195,7 @@ main {
 }
 
 .check-button-phone {
-  width: 24rem;
-  margin: 2rem 0rem 2rem 0rem;
+  margin: 0.5rem 0 1rem;
 }
 
 .question-splitter {
@@ -258,10 +257,4 @@ main {
 .dark-mode-image {
   width: 3rem;
   height: auto;
-}
-
-@media (max-width: 600px) {
-  .button-container-phone {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
-  }
 }
