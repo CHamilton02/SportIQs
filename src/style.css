@@ -244,7 +244,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.toggle-button, .toggle-button-phone {
+.toggle-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -259,13 +259,6 @@ main {
   opacity: 50%;
 }
 
-.toggle-button-phone {
-  top: 20px;
-  right: 20px;
-  padding: 0 0 0 8rem;
-  border-radius: 4rem;
-}
-
 .toggle-button:hover,
 .toggle-button-dark:hover {
   opacity: 100%;
@@ -275,17 +268,9 @@ main {
   padding: 0 4rem 0 0;
 }
 
-.toggle-button-dark-phone {
-  padding: 0 8rem 0 0;
-}
-
-.dark-mode-image, .dark-mode-image-phone {
+.dark-mode-image {
   width: 3rem;
   height: auto;
-}
-
-.dark-mode-image-phone {
-  width: 6rem;
 }
 
 @media (max-width: 600px) {
