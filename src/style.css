@@ -95,17 +95,12 @@ main {
 }
 
 .play-again-button-phone {
-  font-size: 2.5rem;
-  height: 6rem;
+  font-size: 1rem;
+  height: 3rem;
   width: 20rem;
-  border-radius: 1.6rem;
-  margin-bottom: 3rem;
+  border-radius: 1rem;
+  margin: 0 1rem 3rem;
   transition: none;
-}
-
-.play-again-button-phone {
-  font-size: 2.2rem;
-  width: 18rem;
 }
 
 .main-button:hover, .check-button:hover, .play-again-button:hover {
@@ -221,8 +216,8 @@ main {
 }
 
 .endgame-message-phone {
-  font-size: 1.8rem;
-  margin: 0 2rem 1rem 0;
+  font-size: 1rem;
+  margin: 0 2rem 1rem 1rem;
   transition: none;
 }
 
