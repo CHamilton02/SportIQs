@@ -225,7 +225,8 @@ main {
   margin-bottom: 1rem;
 }
 
-.toggle-button {
+.toggle-button,
+.toggle-button-phone {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -245,11 +246,17 @@ main {
   opacity: 100%;
 }
 
-.toggle-button-dark {
+.toggle-button-dark,
+.toggle-button-dark-phone  {
   padding: 0 4rem 0 0;
 }
 
 .dark-mode-image {
   width: 3rem;
+  height: auto;
+}
+
+.dark-mode-image-phone {
+  width: 2.5rem;
   height: auto;
 }
