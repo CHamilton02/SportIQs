@@ -139,13 +139,6 @@ export default function App() {
                     }
                 </div>
                 :
-                isMobile ?
-                <div>
-                    <h1 className="main-title-phone">SportIQs</h1>
-                    <h2 className="main-desc-phone">A sports trivia game!</h2>
-                    <button className="main-button-phone" onClick={() => setgameCounter(1)}>Start Quiz</button>
-                </div>  
-                :
                 <div>
                     <h1 className="main-title">SportIQs</h1>
                     <h2 className="main-desc">A sports trivia game!</h2>
