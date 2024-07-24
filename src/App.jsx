@@ -113,7 +113,7 @@ export default function App() {
                     {
                         isMobile ?
                             finished ? 
-                            <div className="finished-game-container">
+                            <div className="finished-game-container-phone">
                                 {checkAnswers() === 5 && <Confetti />}
                                 <h2 className="endgame-message-phone">{`Game ${gameCounter}: You scored ${checkAnswers()}/5 correct answers`}</h2>
                                 <button className="play-again-button-phone" onClick={playAgain}>
